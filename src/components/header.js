@@ -1,42 +1,24 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import React from 'react'
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
+export const Header = props => {
+  return (
+    <header>
+    <h1>RSVP</h1>
+    <p>A Treehouse + Gatsby App</p>
+    <form onSubmit={props.handleInviteSubmit}>
+        <input
+          type="text"
+          value={props.pendingGuest}
+          placeholder="Invite Someone"
+          onChange={e => props.setPendingGuest(e.target.value)} />
+        <button
+          type="submit"
+          name="submit"
+          value="submit"
         >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
+          Submit
+        </button>
+    </form>
   </header>
-)
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
+  )
 }
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
-
-export default Header
