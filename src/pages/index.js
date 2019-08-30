@@ -13,7 +13,7 @@ const IndexPage = () => {
 
   const newGuestId = () => {
     const id = lastGuestId.current
-    lastGuestId.current = lastGuestId.current +1
+    lastGuestId.current = lastGuestId.current + 1
     return id
   }
 
