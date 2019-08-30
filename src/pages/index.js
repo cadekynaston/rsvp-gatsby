@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { Header } from '../components/Header'
+import { Header } from '../components/header'
 import { MainContent } from "../components/MainContent";
 
 const IndexPage = () => {
